@@ -8,6 +8,9 @@ pdf.image('LONI PROFILE (red) (1).JPEG', w=80, h=90)
 pdf.set_font(family='Times', style='B', size=24)
 pdf.cell(w=0, h=50, txt="Loni's Profile Picture", align='C', ln=1)
 
+pdf.set_font(family='Times', style='B', size=14)
+pdf.cell(w=0, h=15, txt="Description", ln=1) #cell method is used for text with about just single line
+
 
 
 pdf.output('output.pdf')
