@@ -17,5 +17,52 @@ It has a bold and confident model-like feel that I really like. I use this same 
 and Notion, because it stands out and feels like my personal brand. This PDF is a simple introduction to who I am."""
 pdf.multi_cell(w=0, h=15, txt=txt1, ln=1) #Multi_cell method is use for text with multiple lines
 
+pdf.set_font(family='Times', style='B', size=20)
+pdf.cell(w=0, h=40, txt="Loni's Human Classification", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Kingdom:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Animalia", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Phylum:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Chordata", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Class:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Mammalia", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Order:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Primates", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Family:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Hominidae", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Genus:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Homo", ln=1)
+
+pdf.set_font(family='Times', style='B', size=18)
+pdf.cell(w=100, h=20, txt="Species:")
+
+pdf.set_font(family='Times', size=18)
+pdf.cell(w=100, h=20, txt="Homo sapiens", ln=1)
+
+
+
 pdf.output('output.pdf')
 
