@@ -1,3 +1,6 @@
 # Here we're going tp load a PDF file and extract its text as a python string.
-import fitz
+import pymupdf
 
+with pymupdf.open("students.pdf") as pdf:
+    for page in pdf:
+        print(page.get_text())
