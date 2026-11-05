@@ -1,7 +1,7 @@
 import pandas
 from fpdf import FPDF
 df = pandas.read_excel('data.xlsx')
-#print(df)
+print(df)
 
 for index, row in df.iterrows():
     pdf = FPDF(orientation='P', unit='pt', format='A4')
@@ -9,9 +9,12 @@ for index, row in df.iterrows():
 
     pdf.set_font(family='Times', style='B', size=24)
     pdf.cell(w=0, h=40, text=row['name'], align="C", new_x='LMARGIN', new_y='NEXT')
-    
+
     pdf.set_font(family='Times', style='B', size=14)
-    pdf.multi_cell(w=0, h=20, text=f"{row}")
+    pdf.cell(w=100, h=20, text='kingdom:')
+
+    pdf.set_font(family='Times', size=14)
+    pdf.cell(w=0, h=20, text=row["kingdom"], new_x='LMARGIN', new_y='NEXT')
 
     pdf.output(f"{row['name']}.pdf")
 
