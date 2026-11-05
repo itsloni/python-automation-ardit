@@ -6,3 +6,6 @@ with pymupdf.open("students.pdf") as pdf:
         print(20*'-') # This is to show the number of pages in the pdf by using the '-' as an identifier/marker
         # because you're print ing the '-' for each page.
         print(page.get_text())
+
+    page1 = pdf[0].get_text() 
+    print(page1)
