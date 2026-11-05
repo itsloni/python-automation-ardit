@@ -13,5 +13,5 @@ with pymupdf.open("students.pdf") as pdf:
 
     txt = "________"
     for page in pdf:
-        txt = txt + page.get_text() 
+        txt = txt + page.get_text() # If you want to make each page print after each  other
     print(txt)
