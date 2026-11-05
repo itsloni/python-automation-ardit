@@ -1,3 +1,7 @@
 import pandas
 
-df = pandas.read_excel('')
+df = pandas.read_excel('data.xlsx')
+print(df)
+
+for index, row in df.iterrows():
+    
