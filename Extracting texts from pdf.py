@@ -7,5 +7,6 @@ with pymupdf.open("students.pdf") as pdf:
         # because you're print ing the '-' for each page.
         print(page.get_text())
 
-    page1 = pdf[0].get_text() 
+    page1 = pdf[0].get_text() # If you decide to print just the first page of the pdf
+    print(20 * "&")
     print(page1)
