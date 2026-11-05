@@ -10,11 +10,19 @@ for index, row in df.iterrows():
     pdf.set_font(family='Times', style='B', size=24)
     pdf.cell(w=0, h=40, text=row['name'], align="C", new_x='LMARGIN', new_y='NEXT')
 
-    pdf.set_font(family='Times', style='B', size=14)
-    pdf.cell(w=100, h=20, text='kingdom:')
+    for column in df.columns[1:]:
 
-    pdf.set_font(family='Times', size=14)
-    pdf.cell(w=0, h=20, text=row["kingdom"], new_x='LMARGIN', new_y='NEXT')
+        pdf.set_font(family='Times', style='B', size=14)
+        pdf.cell(w=100, h=20, text=f"{column}:")
+
+        pdf.set_font(family='Times', size=14)
+        pdf.cell(w=0, h=20, text=row[f"{column}"], new_x='LMARGIN', new_y='NEXT')
+
+    # pdf.set_font(family='Times', style='B', size=14)
+    # pdf.cell(w=100, h=20, text='Phylum:')
+    #
+    # pdf.set_font(family='Times', size=14)
+    # pdf.cell(w=0, h=20, text=row['phylum'], new_x='LMARGIN', new_y='NEXT')
 
     pdf.output(f"{row['name']}.pdf")
 
