@@ -18,12 +18,6 @@ for index, row in df.iterrows():
         pdf.set_font(family='Times', size=14)
         pdf.cell(w=0, h=20, text=row[f"{column}"], new_x='LMARGIN', new_y='NEXT')
 
-    # pdf.set_font(family='Times', style='B', size=14)
-    # pdf.cell(w=100, h=20, text='Phylum:')
-    #
-    # pdf.set_font(family='Times', size=14)
-    # pdf.cell(w=0, h=20, text=row['phylum'], new_x='LMARGIN', new_y='NEXT')
-
     pdf.output(f"{row['name']}.pdf")
 
 
