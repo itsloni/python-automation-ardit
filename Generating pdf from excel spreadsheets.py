@@ -8,4 +8,6 @@ for index, row in df.iterrows():
     pdf.add_page() # Important to always write this inorder to add the empty page created above
 
     pdf.set_font(family='Times', style='B', size=24)
+    pdf.cell(w=0, h=40, txt=row['name'], align="C", ln=1)
     
+
