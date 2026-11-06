@@ -10,5 +10,5 @@ content = r.json()
 # print(json.dumps(content["articles"][0]["description"], indent=4))
 articles = content['articles']
 
-for article in articles: 
+for article in articles: #used to sieve through the entire article
     print(f"TITLE: {article['title']},\nDESCRIPTION: {article['description']}")
