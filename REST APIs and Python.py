@@ -7,4 +7,4 @@ content = r.json()
 
 #print(json.dumps(content, indent=4))
 print(json.dumps(content["articles"][0]["title"], indent=4))
-
+print(json.dumps(content["articles"][0]["description"], indent=4))
