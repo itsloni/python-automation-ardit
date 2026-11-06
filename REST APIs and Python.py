@@ -37,6 +37,6 @@ def get_news(country_abbreviation, api_key='a3fa169b1c634c3eb19aeb0dac4472c1'):
 user_input = get_news("us")
 print(user_input)
 df = pandas.DataFrame(user_input)
-
+df.to_csv('listofdicts_output.csv')
 
 
