@@ -21,3 +21,6 @@ def get_news(country_abbreviation, api_key='a3fa169b1c634c3eb19aeb0dac4472c1'):
     r = requests.get(url)
     content =r.json()
 
+    articles = content['articles']
+    results = []
+
