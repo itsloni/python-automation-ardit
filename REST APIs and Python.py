@@ -23,4 +23,11 @@ def get_news(country_abbreviation, api_key='a3fa169b1c634c3eb19aeb0dac4472c1'):
 
     articles = content['articles']
     results = []
+    for article in articles:
+        #results.append(f"TITLE: {article['title']}, DESCRIPTION: {article['description']}")
+        result = {
+            "TITLE": article['title'],
+            "DESCRIPTION" : article['description']
+        }
+        results.append(result)
 
