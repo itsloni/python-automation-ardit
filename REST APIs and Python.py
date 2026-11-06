@@ -1,5 +1,6 @@
 import requests
 import json
+import pandas
 
 
 # r = requests.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=a3fa169b1c634c3eb19aeb0dac4472c1') # This is a static url API.
@@ -30,8 +31,11 @@ def get_news(country_abbreviation, api_key='a3fa169b1c634c3eb19aeb0dac4472c1'):
             "DESCRIPTION" : article['description']
         }
         results.append(result)
-    return json.dumps(results, indent=4)
+    #return json.dumps(results, indent=4)
+    return results
 
-#user_input = input("Drop the country and api_key for the news you want: ")
 user_input = get_news("us")
 print(user_input)
+
+
+
