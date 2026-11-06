@@ -30,4 +30,7 @@ def get_news(country_abbreviation, api_key='a3fa169b1c634c3eb19aeb0dac4472c1'):
             "DESCRIPTION" : article['description']
         }
         results.append(result)
+    return json.dumps(results, indent=4)
+
+#user_input = input("Drop the country and api_key for the news you want: ")
 
