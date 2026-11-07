@@ -27,8 +27,8 @@ print(user_input)
 df = pandas.DataFrame(user_input)
 # df.to_string('data_file.txt', index=False)
 for index, row in df.iterrows():
-    
-    print(row)
+    for value in row:
+        print(value)
 #with open('data.txt', 'a') as output_data_file:
 #     output_data_file.write(f'{df}')
 #
