@@ -26,7 +26,7 @@ user_input = (get_weather_updates("Calgary"))
 print(user_input)
 df = pandas.DataFrame(user_input)
 with open('data.txt', 'a') as output_data_file:
-    output_data_file.write(df)
+    output_data_file.write(f'{df}')
 
 # df = pandas.DataFrame(user_input)
 # df.to_txt('data.txt')
