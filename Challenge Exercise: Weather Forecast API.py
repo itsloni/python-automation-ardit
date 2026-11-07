@@ -25,12 +25,12 @@ def get_weather_updates(city, api_key='b819eb6c53c417a8d4ba246a34ec6bff'):
 user_input = (get_weather_updates("Calgary"))
 print(user_input)
 df = pandas.DataFrame(user_input)
-# df.to_string('data_file.txt', index=False)
-for index, row in df.iterrows():
-    for value in row:
-        print(value)
-#with open('data.txt', 'a') as output_data_file:
-#     output_data_file.write(f'{df}')
+#df.to_string('data_file.txt', index=False, header=False)
+# for index, row in df.iterrows():
+#     for column in df.columns[:]:
+#         print(column)
+#         with open('data.txt', 'a') as output_data_file:
+#             output_data_file.write(f'{row[f'{column}']} ,')
 #
 # df = pandas.DataFrame(user_input)
 # df.to_txt('data.txt')
