@@ -16,6 +16,7 @@ def get_weather_updates(city, units='metric', api_key='b819eb6c53c417a8d4ba246a3
     #     }
     #     results.append(result)
 
+    # SO FOR THE ABOVE A SHORTER EASIER VERSION IS ACTUALLY THIS BELOW(line 19 - 22):
     with open('data.txt', 'a') as output_data_file:
         for weather_info in content['list']:
             output_data_file.write(f"{city},{weather_info['dt_txt']},{weather_info['main']['temp']},{weather_info['weather'][0]['description']}\n")
@@ -32,5 +33,5 @@ df = pandas.DataFrame(user_input)
 with open('data.txt', 'a') as output_data_file:
     df.to_csv(output_data_file, index=False, header=False)
 
-# SO FOR THE ABOVE A SHORTER EASIER VERSION IS ACTUALLY THIS BELOW:
+
 
