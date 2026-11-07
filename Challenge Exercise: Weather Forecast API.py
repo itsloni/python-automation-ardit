@@ -16,6 +16,10 @@ def get_weather_updates(city, units='metric', api_key='b819eb6c53c417a8d4ba246a3
         }
         results.append(result)
 
+    with open('data.txt', 'a') as output_data_file:
+        for weather_info in content['list']:
+            output_data_file.write(f"{city},{weather_info['dt_txt']},{weather_info['main']['temp']},{weather_info['weather'][0]['description']}\n")
+
     return results
 
     # easy_read = json.dumps(results, indent=4) #remember that this converts yoy input ot a string
@@ -26,4 +30,6 @@ user_input = (get_weather_updates("Calgary"))
 df = pandas.DataFrame(user_input)
 with open('data.txt', 'a') as output_data_file:
     df.to_csv(output_data_file, index=False, header=False)
+
+# SO FOR THE ABOVE A SHORTER EASIER VERSION IS ACTUALLY THIS BELOW:
 
