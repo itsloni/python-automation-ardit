@@ -21,7 +21,7 @@ def get_weather_updates(city, api_key='b819eb6c53c417a8d4ba246a34ec6bff'):
     easy_read = json.dumps(results, indent=4) #remember that this converts yoy input ot a string
     return easy_read
 
-        # return content
+
 
 user_input = (get_weather_updates("Calgary"))
 print(user_input)
