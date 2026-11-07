@@ -1,1 +1,243 @@
 City,Time,Temperature,Condition
+[
+    {
+        "City": "Calgary",
+        "Time": "2026-11-07 15:00:00",
+        "Temperature": "9.57",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-07 18:00:00",
+        "Temperature": "10.39",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-07 21:00:00",
+        "Temperature": "12.9",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 00:00:00",
+        "Temperature": "11.45",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 03:00:00",
+        "Temperature": "10.22",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 06:00:00",
+        "Temperature": "5.37",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 09:00:00",
+        "Temperature": "7.32",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 12:00:00",
+        "Temperature": "11.14",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 15:00:00",
+        "Temperature": "12.13",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 18:00:00",
+        "Temperature": "15.1",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-08 21:00:00",
+        "Temperature": "15.61",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 00:00:00",
+        "Temperature": "11.94",
+        "Condition": "clear sky"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 03:00:00",
+        "Temperature": "11.51",
+        "Condition": "clear sky"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 06:00:00",
+        "Temperature": "6.56",
+        "Condition": "clear sky"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 09:00:00",
+        "Temperature": "4.83",
+        "Condition": "clear sky"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 12:00:00",
+        "Temperature": "2.42",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 15:00:00",
+        "Temperature": "-0.54",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 18:00:00",
+        "Temperature": "4.44",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-09 21:00:00",
+        "Temperature": "7.37",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 00:00:00",
+        "Temperature": "4.23",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 03:00:00",
+        "Temperature": "2.27",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 06:00:00",
+        "Temperature": "0.45",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 09:00:00",
+        "Temperature": "0.9",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 12:00:00",
+        "Temperature": "1.7",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 15:00:00",
+        "Temperature": "1.13",
+        "Condition": "few clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 18:00:00",
+        "Temperature": "6.95",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-10 21:00:00",
+        "Temperature": "9.65",
+        "Condition": "scattered clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 00:00:00",
+        "Temperature": "6.88",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 03:00:00",
+        "Temperature": "5.14",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 06:00:00",
+        "Temperature": "4.67",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 09:00:00",
+        "Temperature": "4.62",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 12:00:00",
+        "Temperature": "3.96",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 15:00:00",
+        "Temperature": "4.57",
+        "Condition": "light rain"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 18:00:00",
+        "Temperature": "9.38",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-11 21:00:00",
+        "Temperature": "12.06",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-12 00:00:00",
+        "Temperature": "11.05",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-12 03:00:00",
+        "Temperature": "9.57",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-12 06:00:00",
+        "Temperature": "8.9",
+        "Condition": "broken clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-12 09:00:00",
+        "Temperature": "8.24",
+        "Condition": "overcast clouds"
+    },
+    {
+        "City": "Calgary",
+        "Time": "2026-11-12 12:00:00",
+        "Temperature": "5.84",
+        "Condition": "overcast clouds"
+    }
+]

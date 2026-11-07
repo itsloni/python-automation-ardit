@@ -16,18 +16,18 @@ def get_weather_updates(city, api_key='b819eb6c53c417a8d4ba246a34ec6bff'):
         }
         results.append(result)
 
-    return results
+    #return results
 
-        # easy_read = json.dumps(results, indent=4)
-        # return easy_read
+    easy_read = json.dumps(results, indent=4)
+    return easy_read
 
         # return content
 
 user_input = (get_weather_updates("Calgary"))
 print(user_input)
 
-# with open('data.txt', 'a') as output_data_file:
-#     output_data_file.write(user_input)
+with open('data.txt', 'a') as output_data_file:
+    output_data_file.write(user_input)
 
 # df = pandas.DataFrame(user_input)
 # df.to_txt('data.txt')
