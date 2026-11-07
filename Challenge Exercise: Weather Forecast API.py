@@ -23,3 +23,6 @@ def get_weather_updates(city, api_key='b819eb6c53c417a8d4ba246a34ec6bff'):
 
         # return content
 
+user_input = (get_weather_updates("Calgary"))
+print(user_input)
+
