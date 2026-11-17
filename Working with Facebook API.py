@@ -1,6 +1,15 @@
 import requests
+import json
 
-url = "https://graph.facebook.com/v27.0/me?fields=id%2Cname&access_token=EAA7VKptesBgBTJo4XZBeVZAB4KEOKXpje0mU3nyYpXhopMrpp0sSbpvCjy2mgYhLik3ZBrHbxWKTILSrnWcHxkvoW4kbfXq2cSqsu0rQjHXCkSOuZA91mTHKcrhi2Kn1pE6yJVtifGui7bOS4wnq1gV1dWQOD0Y39THAHxyyISyFXFx9mTEOHtry4ZCeW1i6Y0AIBpfXKELwY4aBrNeeo4ngQaJ5SadBgZAvDOik7eQ7XdYtLizDOKRJmAz7VvaurSZCDXWEUJLL8NVkIfZAPzuz4YaxE1oZD"
+url = "https://graph.facebook.com/v27.0/me?fields=id%2Cname%2Cemail%2Cpicture&access_token=EAA7VKptesBgBTJEHTLGFxbPxwZApNdLhBwxAIMpGfCOsoZAMRYgCVRntUhEj7zjPQkJjxunjAQFZCZAqQSlp3aEwO847GZAl6ZCeNwNMh8padE6tXFtiOSEVZBAMfNLJZClED9bK2rY4EGrsB6G3UMihaVabGrZC3IgZCbMZBAXANEJuc8tUB0pBzzYq8478uJff1Vt93f5FT6Ro6DQe9HQKT0iDyuzq9OUaZBLEbIt2"
 
 response = requests.get(url)
-print(response.content)
+
+data = response.json()
+image_url = data["picture"]["data"]["url"]
+
+image_byte = requests.get("https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=122104099875549027&height=50&width=50&ext=1797520900&hash=Afu4vB1rNz_wZtzj_XeDtFtl")
+pure_image_byte = image_byte.content
+
+with open ("image.jpg", "wb") as file:
+    file.write(pure_image_byte)
