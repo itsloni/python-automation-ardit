@@ -1,4 +1,7 @@
 from pathlib import Path
+#NOTE: THE file names and locations that are use here might change and have a prefix like 'New_' there about but everything here worked and is correct
+
+
 # so pathlib typically uses a path object type to represent the file path.
 # For example normally if we'd used import os then if we wanted to import filein file abc.txt it'll be:
 p1 = "files/abc.txt"
