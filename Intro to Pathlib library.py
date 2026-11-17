@@ -27,4 +27,13 @@ if not p3.exists():
 print(p3.name) # here you will get the result 'num.txt' and with this it'll be helpful in manipulation or changing file names.
 print(p3.stem) # This prints the file name WITHOUT the extension so like e.g 'num' without the txt.
 print(p3.suffix) # This just prints the extension eng. '.txt' from the file name num.txt
+# YOU can also use path with folders/directories
+p4 = Path("files")
+# We can even iterate through it to get the list of iles inside the folder by using a for loop and .iterdir() example below:
+for item in p4.iterdir():
+    print(item)# We get the list of all the files inside the folder, and they are still not string but Path that can
+    # still be used which shows the consistency of pathlib
+
+# AND THIS ALL WORKS CAUSE TEH PATH NAME STORED IN P2 OR P3 IS NOT A STRING LIKE THE ONE IN P1 EXAMPLE CAUSE PATH DOESN'T STORE IT AS STRING BUT AS OBJECT PATH.
+# ALSO, YOU REALISE OS DOES SIMILAR BUT OS TREAT THE FILE PATH AS A STRING AND HENCE CAN'T BE AS EASY AS PATH tho it POSSIBLE WITH OS JUST HARDER.
 
