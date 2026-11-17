@@ -1,0 +1,6 @@
+import requests
+
+url = "https://graph.facebook.com/v27.0/me?fields=id%2Cname&access_token=EAA7VKptesBgBTJo4XZBeVZAB4KEOKXpje0mU3nyYpXhopMrpp0sSbpvCjy2mgYhLik3ZBrHbxWKTILSrnWcHxkvoW4kbfXq2cSqsu0rQjHXCkSOuZA91mTHKcrhi2Kn1pE6yJVtifGui7bOS4wnq1gV1dWQOD0Y39THAHxyyISyFXFx9mTEOHtry4ZCeW1i6Y0AIBpfXKELwY4aBrNeeo4ngQaJ5SadBgZAvDOik7eQ7XdYtLizDOKRJmAz7VvaurSZCDXWEUJLL8NVkIfZAPzuz4YaxE1oZD"
+
+response = requests.get(url)
+print(response.content)
