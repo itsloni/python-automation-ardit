@@ -18,8 +18,13 @@ p3 = Path("files/num.txt") # at this moment there is no file named 'num.txt'
 
 if not p3.exists():
     with open (p3, "w") as file:
-        file.write("Content 3")
+        result = file.write("Content 3")
+        print(result)
         # So it check ooh! 'num.txt' does not exist then lemme create teh file and then
         #write 'Content 3'
 
+#ALSO you realize that the Path pobject has a lot of attributes that it can be used with for exampl if yiu want to get just the name of the file you just do:
+print(p3.name) # here you will get the result 'num.txt' and with this it'll be helpful in manipulation or changing file names.
+print(p3.stem) # This prints the file name WITHOUT the extension so like e.g 'num' without the txt.
+print(p3.suffix) # This just prints the extension eng. '.txt' from the file name num.txt
 
