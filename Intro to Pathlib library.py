@@ -33,6 +33,7 @@ p4 = Path("files")
 for item in p4.iterdir():
     print(item)# We get the list of all the files inside the folder, and they are still not string but Path that can
     # still be used which shows the consistency of pathlib
+print(list(p4.iterdir())) # you could even do these so this list the full path of all the items inside the folder/directory
 
 # AND THIS ALL WORKS CAUSE TEH PATH NAME STORED IN P2 OR P3 IS NOT A STRING LIKE THE ONE IN P1 EXAMPLE CAUSE PATH DOESN'T STORE IT AS STRING BUT AS OBJECT PATH.
 # ALSO, YOU REALISE OS DOES SIMILAR BUT OS TREAT THE FILE PATH AS A STRING AND HENCE CAN'T BE AS EASY AS PATH tho it POSSIBLE WITH OS JUST HARDER.
