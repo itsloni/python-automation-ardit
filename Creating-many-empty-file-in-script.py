@@ -16,3 +16,5 @@ archive_path = root_dir / Path("archive.zip")
 with zipfile.ZipFile(archive_path, "w") as zip_ref:
     for path in root_dir.glob("*.txt"):
         zip_ref.write(path)
+        path.unlink() # This is used to delete files as they are being archived
+
