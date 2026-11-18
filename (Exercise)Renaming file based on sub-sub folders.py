@@ -11,8 +11,10 @@ for path in full_filepath:
     if path.is_file():
         grandparent_folder_name = path.parts[-3]
         parent_folder_name = path.parts[-2]
+        # The 2 lines above could be written singly as 'sub_folders = path.parts[1:-1]' this catches the year and month in the tuple
         #print(grandparent_folder_name, parent_folder_name)
         new_filename = grandparent_folder_name + "-" + parent_folder_name + "-" + path.stem + path.suffix
+        # The new_filename can be written as new_filename = "-".join(subfolders) + "-" + path.name # This is shorter and gives same result.
         full_filename = path.with_name(new_filename)
         updated_new_filepath = path.rename(full_filename)
         print(updated_new_filepath)
