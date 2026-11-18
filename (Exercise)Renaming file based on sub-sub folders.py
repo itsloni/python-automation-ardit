@@ -13,5 +13,6 @@ for path in full_filepath:
         parent_folder_name = path.parts[-2]
         #print(grandparent_folder_name, parent_folder_name)
         new_filename = grandparent_folder_name + "-" + parent_folder_name + "-" + path.stem + path.suffix
-        updated_new_filepath = path.rename(new_filename)
+        full_filename = path.with_name(new_filename)
+        updated_new_filepath = path.rename(full_filename)
         print(updated_new_filepath)
