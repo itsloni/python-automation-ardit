@@ -1,7 +1,7 @@
 from pathlib import Path
 
 root_folder = Path("file-ext")
-full_path = root_folder.glob("*.txt")
+full_path = root_folder.glob("*.txt") # You cn use rglob("*.txt") but is used when there is a lot f sub folders..basically means recursive and it's the equivalent of glob("**/*.txt")
 for path in full_path:
     if path.is_file():
         new_extension = path.stem + ".csv"
