@@ -11,7 +11,7 @@ for i in range(10, 21):
 import zipfile
 # We create the Path object for the folder containing the  files we want to zip which is already done in line 3
 #Then we create another Path object that is used to for the ath to where the zipfile will be. Which i just did below
-archive_path = root_dir / Path("archive.zip")
+archive_path = root_dir / Path("archive1.zip")
 
 with zipfile.ZipFile(archive_path, "w") as zip_ref:
     for path in root_dir.glob("*.txt"):
