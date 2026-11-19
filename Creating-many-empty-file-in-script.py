@@ -15,6 +15,7 @@ archive_path = root_dir / Path("archive1.zip")
 
 with zipfile.ZipFile(archive_path, "w") as zip_ref:
     for path in root_dir.glob("*.txt"):
-        zip_ref.write(path)
+        zip_ref.write(path) # or you can use 'zip_ref.write(path, arcname=path.stem)' which will only archive/zip the files
+        # in the file2 folder with archiving file2 too
         path.unlink() # This is used to delete files as they are being archived
 
