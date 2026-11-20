@@ -1,6 +1,6 @@
 import os
 import yagmail
-from time import time
+import time
 from datetime import datetime
 
 
@@ -16,10 +16,10 @@ every minute...ahhhh! yay!
 def auto_email(my_password, sender, receiver, subject, content):
     yag = yagmail.SMTP(user=sender, password=my_password)
     email = yag.send(to=receiver, subject=subject, contents=content)
-    # email_time = datetime.now()
-    return email #email_time,email
+    return email
 
 while True:
-    current_time = time()
-    if current_time > 60:
-        email = auto_email(my_password, sender, receiver, subject, content)
+    email = auto_email(my_password, sender, receiver, subject, content)
+    print("Email Sent")
+    time.sleep(60)
+
