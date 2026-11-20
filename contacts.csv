@@ -1,7 +1,7 @@
-name,email
-Riel,rielbumba@gmail.com
-Yola,loniyola28@gmail.com
-lonimi,lonimi709@gmail.com
-loni,itsloni15@gmail.com
+name,email,amount,filepath
+Riel,rielbumba@gmail.com,20,bill-1.txt
+Yola,loniyola28@gmail.com,30,bill-2.txt
+lonimi,lonimi709@gmail.com,40,bill-3.txt
+loni,itsloni15@gmail.com,10,bill-4.txt
 
 
