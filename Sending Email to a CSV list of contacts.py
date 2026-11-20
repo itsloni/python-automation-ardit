@@ -11,7 +11,7 @@ subject = "This is an AUTO email sent form extracted receivers in a csv file"
 
 message = """
 This email was sent as an automatic email and the sender got your email address 
-from a csv file. HAHAHAHA!
+from a csv file. HAHAHAHA!!
 """
 df = pandas.read_csv("contacts.csv")
 
