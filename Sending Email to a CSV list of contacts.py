@@ -10,7 +10,7 @@ sender = os.getenv("email")
 subject = "This is an AUTO email sent form extracted receivers in a csv file"
 
 # message = f"""
-# This email was sent as an automatic email and the sender got your email address {row["email"]}
+# This email was sent as an automatic email and the sender got your email address
 # from a csv file. HAHAHAHA!!
 # """
 df = pandas.read_csv("contacts.csv")
