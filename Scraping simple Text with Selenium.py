@@ -9,7 +9,7 @@ def get_driver():
     options.add_argument('start-maximized') #This is good cause like some webpages makes the font and areas in the site smaller when you try to access it so the 'start-maximized' works well.
     options.add_argument('disable-dev-shm-usage') #This option is to avoid issues that occur when you interact with the browser on a linux computer
     options.add_argument("no-sandbox") #so webpages for security do what we call sandboxing but if we want our webdriver to have more priviledges we use this option so sandboxing is disabled
-    options.add_experimental_option("excludeSwitches", ["enable_automation"]) #This '.add_experimental_option' is used so selenium can avoid detection from web browsers.
+    options.add_experimental_option("excludeSwitches", ["enable-automation"]) #This '.add_experimental_option' is used so selenium can avoid detection from web browsers.
     options.add_argument("disable-blink-features=AutomationControlled")
 
     driver = webdriver.Chrome(options=options)

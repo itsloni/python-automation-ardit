@@ -1,5 +1,7 @@
 import smtplib
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 sender = os.getenv("outlook_email")
 receiver = "rielbumba@gmail.com"
