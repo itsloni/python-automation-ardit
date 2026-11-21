@@ -2,6 +2,9 @@ import smtplib
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+load_dotenv()
+
 
 sender = os.getenv("outlook_email")
 receiver = "rielbumba@gmail.com"
