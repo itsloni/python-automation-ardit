@@ -16,9 +16,13 @@ def get_drivers():
 
     drivers = webdriver.Chrome()
     drivers.get("https://www.pythonanywhere.com/login/")
-
-
+    time.sleep(3)
+    return drivers
+# get_drivers()
 
 def main():
     drivers = get_drivers()
-    drivers
+    check = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
+    return check.text
+
+print(main())
