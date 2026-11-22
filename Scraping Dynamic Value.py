@@ -2,6 +2,7 @@
 #Selenium is a 3rd party Python library that is used to automate browser actions including things like
 # clicking on a link, copying text, or login to website, entering username and password and so on etc
 from selenium import webdriver
+import time
 
 def get_driver():
     #The options below are set to make browsing easier
@@ -14,7 +15,7 @@ def get_driver():
     options.add_argument("disable-blink-features=AutomationControlled")
 
     driver = webdriver.Chrome(options=options)
-    driver.get("https://www.timeanddate.com/")
+    driver.get("https://www.timeanddate.com/worldclock/nigeria/lagos")
     return driver
 
 def clean_text(text):
@@ -24,7 +25,8 @@ def clean_text(text):
 
 def main():
     driver = get_driver()
-    element = driver.find_element(by="xpath", value="//*[@id='clk_box']")
+    time.sleep(2)
+    element = driver.find_element(by="xpath", value="//*[@id='ct']")
     return clean_text(element.text)
 
 print(main())
