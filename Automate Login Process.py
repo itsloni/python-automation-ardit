@@ -1,6 +1,10 @@
 #Automating Login in Process
 from selenium import webdriver
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
+my_password = os.getenv("outlook_password")
 def get_driver():
     #The options below are set to make browsing easier
     options = webdriver.ChromeOptions()
@@ -18,6 +22,6 @@ def main():
     driver = get_driver()
     driver.find_element(by="id", value="id_auth-username").send_keys("itsloni") # So because we're trying to login into a website instead of using 'xpath' we can use 'id'  its more robust and efficient
   # note the above driver.find is not in a variable like teh other one we did in scraping cause right now we're not scraping but rather we're trying to accesa  website
-    driver.find_element(by="id", value="id_auth-password").send_keys("")
+    driver.find_element(by="id", value="id_auth-password").send_keys(my_password)
 print(main())
 
