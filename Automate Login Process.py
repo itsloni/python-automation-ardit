@@ -16,7 +16,7 @@ def get_driver():
     return driver
 def main():
     driver = get_driver()
-    element = driver.find_element(by="xpath", value="/html/body/div[1]/p[2]")
+    element = driver.find_element(by="id", value="id_auth-username") # So because we're trying to login into a website instead of using 'xpath' we can use 'id'  its more robust and efficient
     return element.text
 
 print(main())
