@@ -31,7 +31,7 @@ print(str_to_datetime_converter) # THIS HAS OFFICIALLY CONVERTED THE DATETIME ST
 
 #Now if you plan to then Convert the datetime object to an EPOCH time. you will do the below: # But you have to import time first
 import time
-from_epoch = time.mktime(str_to_datetime_converter.timetuple())
+from_epoch = int(time.mktime(str_to_datetime_converter.timetuple())) # now note that some site don't take the epoch value bare cause its always a float so you simple just convert it to an int and thats it.
 print(from_epoch) #Exactly now it has been converted to time in epoch version which is time in seconds.
 
 
