@@ -29,7 +29,10 @@ def main():
     drivers.find_element(by="id", value="id_auth-username").send_keys("itsloni")
     time.sleep(2)
     drivers.find_element(by="id", value="id_auth-password").send_keys(my_password + Keys.RETURN)
-    # check = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
-    # return check.text
+    time.sleep(2)
+    drivers.find_element(by="id", value="id_tasks_link").click()
+    time.sleep(2)
+    # scraped_element = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
+    # return scraped_element.text
 
 print(main())
