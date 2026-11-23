@@ -20,7 +20,6 @@ def get_drivers():
 
     drivers = webdriver.Chrome(options=options)
     drivers.get("https://www.pythonanywhere.com/login/")
-    time.sleep(3)
     return drivers
 # get_drivers()
 
@@ -32,8 +31,8 @@ def main():
     time.sleep(2)
     drivers.find_element(by="id", value="id_tasks_link").click()
     time.sleep(2)
-    scraped_element = drivers.find_element(by="xpath", value="//*[@id='id_cpu_usage_information'][1]")
-    final_scraped_element = scraped_element.text.strip(" More Info")
+    scraped_element = drivers.find_element(by="id", value="id_cpu_usage_information")
+    final_scraped_element = scraped_element.text.replace(" More Info", "").strip()
     return final_scraped_element
 
 print(main())
