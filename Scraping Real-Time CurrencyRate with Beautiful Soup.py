@@ -8,6 +8,9 @@ def get_currency(input_currency, output_currency):
     content = requests.get(url).text
     soup = BeautifulSoup(content, "html.parser")
     rate = soup.find("span", class_="ccOutputRslt title-36 text-content-base tabular-nums sm:title-48").get_text()
-    print(rate)
+   # cleaned_text = rate.split(" ")[0] # This is one way to clean it or
+    cleaned_text = float(rate[:-4]) # This
+    return cleaned_text
 
-get_currency("USD", "GBP")
+current_rate = get_currency("USD", "INR")
+print(current_rate)
