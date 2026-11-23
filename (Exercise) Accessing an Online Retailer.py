@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import os
 import time
 from dotenv import load_dotenv
@@ -25,4 +26,7 @@ def get_driver():
 # get_driver()
 def main():
     driver = get_driver()
-    driver.find_element(by="", value="").send_keys(my_email)
+    driver.find_element(by="id", value="CustomerEmail").send_keys(my_email)
+    driver.find_element(by="id", value="CustomerPassword").send_keys(my_password + Keys.RETURN)
+    driver.find_element(by="", value="").click()
+main()
