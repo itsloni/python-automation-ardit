@@ -1,4 +1,6 @@
 from selenium import webdriver
+import time
+from datetime import datetime
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -12,8 +14,17 @@ def get_driver():
     driver = webdriver.Chrome(options=options)
     driver.get("https://www.timeanddate.com/worldclock/nigeria/lagos")
 
+    return driver
 
+
+def clean_text(text):
+    output = int(text.split(":")[2])
+    return output
 
 def main():
     driver = get_driver()
-    driver.find_element(by="xpath", value="")
+    element = driver.find_element(by="id", value="ct")
+    time.sleep(2)
+    return clean_text(element.text)
+
+print(main())
