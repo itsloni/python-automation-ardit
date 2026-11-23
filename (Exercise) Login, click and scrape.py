@@ -14,7 +14,7 @@ def get_drivers():
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_argument("disable-blink-features=AutomationControlled")
 
-    drivers = webdriver.Chrome()
+    drivers = webdriver.Chrome(options=options)
     drivers.get("https://www.pythonanywhere.com/login/")
     time.sleep(3)
     return drivers
@@ -22,7 +22,10 @@ def get_drivers():
 
 def main():
     drivers = get_drivers()
-    check = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
-    return check.text
+    drivers.find_element(by="id", value="id_auth-username").send_keys("itsloni")
+    time.sleep(2)
+
+    # check = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
+    # return check.text
 
 print(main())
