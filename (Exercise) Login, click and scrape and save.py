@@ -19,15 +19,7 @@ def get_driver():
 
 def clean_text(text):
     output = int(text.split(":")[2])
-    return str(output)
-
-def main():
-    driver = get_driver()
-    while True:
-        element = driver.find_element(by="id", value="ct")
-        cleaned_text = clean_text(element.text)
-        auto_file_creator(cleaned_text)
-        time.sleep(2)
+    return output
 
 
 def auto_file_creator(cleaned_text):
@@ -36,5 +28,12 @@ def auto_file_creator(cleaned_text):
     with open (f"{output_time}.txt", "w") as file:
         return file.write(cleaned_text)
 
+def main():
+    driver = get_driver()
+    while True:
+        element = driver.find_element(by="id", value="ct")
+        cleaned_text = str(clean_text(element.text))
+        auto_file_creator(cleaned_text)
+        time.sleep(2)
 
 main()
