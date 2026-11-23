@@ -32,7 +32,8 @@ def main():
     time.sleep(2)
     drivers.find_element(by="id", value="id_tasks_link").click()
     time.sleep(2)
-    # scraped_element = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
-    # return scraped_element.text
+    scraped_element = drivers.find_element(by="xpath", value="//*[@id='id_cpu_usage_information'][1]")
+    final_scraped_element = scraped_element.text.strip(" More Info")
+    return final_scraped_element
 
 print(main())
