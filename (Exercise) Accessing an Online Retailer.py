@@ -19,3 +19,10 @@ def get_driver():
     options.add_argument("disable-blinking-features=AutomationControlled")
 
     driver = webdriver.Chrome(options=options)
+    driver.get(url)
+    time.sleep(3)
+    return driver
+# get_driver()
+def main():
+    driver = get_driver()
+    driver.find_element(by="", value="").send_keys(my_email)
