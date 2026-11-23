@@ -1,9 +1,13 @@
 from selenium import webdriver
 import time
+import os
 from selenium.webdriver.common.keys import Keys
 from dotenv import load_dotenv
 
 load_dotenv()
+
+my_password = os.getenv("outlook_password")
+
 
 def get_drivers():
     options = webdriver.ChromeOptions()
@@ -24,7 +28,7 @@ def main():
     drivers = get_drivers()
     drivers.find_element(by="id", value="id_auth-username").send_keys("itsloni")
     time.sleep(2)
-
+    drivers.find_element(by="id", value="id_auth-password").send_keys(my_password + Keys.RETURN)
     # check = drivers.find_element(by="xpath", value="/html/body/div[1]/div[2]/div/div/h1")
     # return check.text
 
