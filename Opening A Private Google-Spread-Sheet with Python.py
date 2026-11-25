@@ -40,7 +40,7 @@ worksheet1 = spreadsheet.worksheet('2013') # Here you input the name of the work
 #To select a specific  cell faster you cn do
 #data = worksheet1.get_values("A4:F7"# This is to get row or rows
 
-#column = worksheet1.get_values("C1:C24") # The difference here is the fact you are calling the columns but it is not the most efficient. The easiest is using the '.col_values()' method specific to
+#column = worksheet1.get_values("B1:B24") # The difference here is the fact you are calling the columns but it is not the most efficient. The easiest is using the '.col_values()' method specific to
 # column so that the output will not be a nested list unlike the former and the '.col_values()' method accepts the index of the row instead.
 # And the good thing is that you can also use the '.row_values()' to get the specific row you want.
 
