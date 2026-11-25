@@ -26,7 +26,7 @@ data = worksheet1.get_all_records() #------------>>>>>>>  # So this with the met
                                                             # whatever data that's in the specific cell and it does it from left to right before it moves to the
                                                             # next row of cells. NOTE: R1C1 means Row1 Column1
 
-print(data[10]) #used to extract the 10th when ".get_all_records" row since it's a list of dictionaries
+#print(data[10]) #used to extract the 10th when ".get_all_records" row since it's a list of dictionaries
 
 
 # NOTE: There're are actually better way to extract rows and columns from the worksheet.
@@ -34,7 +34,7 @@ print(data[10]) #used to extract the 10th when ".get_all_records" row since it's
 #NOW IF YOU WANT TO GET A WORKSHEET BY NAME (LIKE THE '2013' AND '2014' WORKSHEET IN THE 'Automating google-sheet with python' GOOGLE SPREADSHEET) AND NOT INDEX, YOU MUST DO THE FOLLOWING BELOW:
 
 worksheet1 = spreadsheet.worksheet('2013') # Here you input the name of the work sheet "2013" and it gives th same output as the ".get_worksheet(0)" method.
-
+data = worksheet1.get_all_records()
 print(data)
 
 
