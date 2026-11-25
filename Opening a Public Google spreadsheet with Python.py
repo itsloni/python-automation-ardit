@@ -9,3 +9,4 @@ url_sheet2 = "https://docs.google.com/spreadsheets/d/1D7U4A9c-hwWWYokmGWAQnUTKsy
 data = pandas.read_csv(url_sheet2) # the csv() normally expects a file that's locally here, but you can also give it a link
 print(data)
 
+#NOTE : USING just pandas alone you CANNOT write, change or EDIT a spreadsheet in python, you will have to use the google sheet API'
