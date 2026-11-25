@@ -12,7 +12,19 @@ gc = gspread.service_account("secrets.json") # This line establishes a connectio
 spreadsheet = gc.open("Automating google-sheet with python") # This is to open the actual google spreadsheet that can have multiple worksheet Tabs
 
 #So now you know that there can be multiple worksheets in a spreadsheet like the '2013' and the '2014' worksheet created at the bottom of the page. remember they are tabs those worksheets and you can create many tabs/worksheet in a single google spreadsheet.
-# So one way to call the worksheet you want from that "Automating google-sheet with python" spreadsheet  is by INDEX as shown below
-worksheet1 = spreadsheet.get_worksheet(0)
+# So one way to call the worksheet you want from that "Automating google-sheet with python" spreadsheet  is by INDEX as shown below:
+
+worksheet1 = spreadsheet.get_worksheet(0) #------------>>>>  # This first gives the index of the first worksheet and name
+data = worksheet1.get_all_records() #------------>>>>>>>  # So this with the method ".get_all_records()" prints the contents of the
+                                                            # worksheet. It returns them in a list of dictionaries, such that each dictionary is a row from the
+                                                            # spreadsheet having key, which is the header for the spreadsheet, and value which is the corresponding value of each header for that
+                                                            # specific row each.
+data = worksheet1.get_all_values()   #------------>>>>>>>   # this method '.get_all_values()'  returns a list within a list like each list within the
+                                                            # list contains a row from the worksheet. the first row in the worksheet is the header filed so that is the fist list and then the
+                                                            # subsequent ros are then in their own list each
+data = worksheet1.get_all_cells()  #------------>>>>>>>      # This returns each cell of the worksheet like <Cell R1C1 'name'> the 'name' is just
+                                                            # whatever data that's in the specific cell and it does it from left to right before it moves to the
+                                                            # next row of cells. NOTE: R1C1 means Row1 Column1
+print(data)
 
 
