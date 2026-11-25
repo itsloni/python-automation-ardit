@@ -38,15 +38,70 @@ worksheet1 = spreadsheet.worksheet('2013') # Here you input the name of the work
 # print(data)
 
 #To select a specific  cell faster you cn do
-#data = worksheet1.get_values("A4:F7"# This is to get row or rows
+#data = worksheet1.get_values("A4:F7") # This is to get row or rows
 
 #column = worksheet1.get_values("B1:B24") # The difference here is the fact you are calling the columns but it is not the most efficient. The easiest is using the '.col_values()' method specific to
 # column so that the output will not be a nested list unlike the former and the '.col_values()' method accepts the index of the row instead.
 # And the good thing is that you can also use the '.row_values()' to get the specific row you want.
 
-column = worksheet1.col_values(2)[1:] # I added the square brackets to slice the list so note it can be manipulated.
-row = worksheet1.row_values(1)
-print(column)
-print(row)
+# column = worksheet1.col_values(2)[1:] # I added the square brackets to slice the list so note it can be manipulated.
+# row = worksheet1.row_values(1)
+# print(column)
+# print(row)
+
+# With those methods above you know that there are way you can get just a single cell likes;
+# data = worksheet1.get_values("D4") # THIS GIVE YOU THE EXACT D4 cell but remember it's a list withing a list [[]]. so to get the actual value you must
+# data = worksheet1.get_values("D4")[0][0]  # This gives the actual value inside D4 cell.
+
+#BUT A BETTER APPROACH TO GETTING CELLS IS USING THE .acell() method as shown below:
+# cell = worksheet1.acell("D4").value #This gives the D4 value directly without it being in a list of lists like [[]]
+#
+# #You can also search using '.find()' method for a particular cell  like a value inside a cell so you know the cell it's in. what you do is:
+# cell2 = worksheet1.find("-10") # So in this case i am looking for the exact cell that contains the value '-10'
+#
+# # To get the coordinate of the cell2 u can do :
+# print(cell2.row, cell2.col)
+#
+# #If you wanna find the all the cells that have a specific value you use the method '.findall()' like below:
+# cell3 = worksheet1.findall("-9")
+# print(cell3) # This then gives you a list of  where they are.
+
+
+# NOW WHAT IF YOU WANT TO SEARCH TO MATCH PARTIAL STRING WHERE You only know some part of the value so u want to find all cells that contain that part of the value.
+#You have to use REGULAR EXPRESSION library which is 're'.
+import re
+
+reg = re.compile(r'99')
+cell3 = worksheet1.findall(reg)
+
+for cell in cell3:
+    print(cell.row, cell.col)
+
+# HOW TO UPDATE A CELL IN A GOOGLE SPREADSHEET THERE ARE 2 WAYS TO DO THIS
+#The first way is below:
+
+worksheet1.update([[-400]], "E4") # So the 'E4' is the value you want to change and the '-400' is what's replacing it.
+
+# You can also just update a single cell by using .update_acel() as shown below:
+worksheet1.update_acell("E7", -390)
+
+worksheet1.update_cell(4, 4, -900) # SAME WAY TO UPDATE A CELL THIS TIME USING TEH ROW, COLUM NUMBERS
+
+
+# BELOW SHOWS HOW TO UPDATE AND ADD A COLUMN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
