@@ -19,12 +19,22 @@ data = worksheet1.get_all_records() #------------>>>>>>>  # So this with the met
                                                             # worksheet. It returns them in a list of dictionaries, such that each dictionary is a row from the
                                                             # spreadsheet having key, which is the header for the spreadsheet, and value which is the corresponding value of each header for that
                                                             # specific row each.
-data = worksheet1.get_all_values()   #------------>>>>>>>   # this method '.get_all_values()'  returns a list within a list like each list within the
+#data = worksheet1.get_all_values()   #------------>>>>>>>   # this method '.get_all_values()'  returns a list within a list like each list within the
                                                             # list contains a row from the worksheet. the first row in the worksheet is the header filed so that is the fist list and then the
                                                             # subsequent ros are then in their own list each
-data = worksheet1.get_all_cells()  #------------>>>>>>>      # This returns each cell of the worksheet like <Cell R1C1 'name'> the 'name' is just
+#data = worksheet1.get_all_cells()  #------------>>>>>>>      # This returns each cell of the worksheet like <Cell R1C1 'name'> the 'name' is just
                                                             # whatever data that's in the specific cell and it does it from left to right before it moves to the
                                                             # next row of cells. NOTE: R1C1 means Row1 Column1
+
+print(data[10]) #used to extract the 10th when ".get_all_records" row since it's a list of dictionaries
+
+
+# NOTE: There're are actually better way to extract rows and columns from the worksheet.
+
+#NOW IF YOU WANT TO GET A WORKSHEET BY NAME (LIKE THE '2013' AND '2014' WORKSHEET IN THE 'Automating google-sheet with python' GOOGLE SPREADSHEET) AND NOT INDEX, YOU MUST DO THE FOLLOWING BELOW:
+
+worksheet1 = spreadsheet.worksheet('2013') # Here you input the name of the work sheet "2013" and it gives th same output as the ".get_worksheet(0)" method.
+
 print(data)
 
 
