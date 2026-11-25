@@ -4,5 +4,7 @@
 # delete data, update, edit etc.
 
 # To do this we need the 'gspread' library and then you get an api key from google.
+#To get google api what you do is search for google api console, set up your google drive API(already did that you only set it up once) AND THEN YOU ENABLE GOOGLE SPREADSHEET API.
+import gspread
 
 
