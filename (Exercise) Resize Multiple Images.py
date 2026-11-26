@@ -25,17 +25,23 @@ def calculate_image(scale_percentage, height, width):
 def resize_image(image_path, scale_percentage, resized_image_path):
     logging.info("Resizing the image...")
     if not INPUT_DIR.exists():
-        logging.warning("Directory does not exist")
+        logging.error("Directory does not exist")
         return None
     for image in image_path:
         if not image.is_file():
-            logging.warning(f"{image} is not a file, skipping {image}")
+            logging.warning(f"{image.name} is not a file, skipping {image.name}")
             continue
         old_sized_image = cv2.imread(image)
+        if old_sized_image is None:
+            logging.warning(f"{image.name} is not supported or is corrupted")
+            continue
         new_dimension = calculate_image(scale_percentage, old_sized_image.shape[0], old_sized_image.shape[1])
         resized_image = cv2.resize(old_sized_image, new_dimension)
-        cv2.imwrite(f"{resized_image_path}/{image.name}", resized_image)
 
+        if cv2.imwrite(f"{resized_image_path}/{image.name}", resized_image):
+            logging.info(f"Resized {image.name} to {new_dimension}")
+        else:
+            logging.error(f"Am error has occurred and {image.name} cannot be resized")
 
 def main():
     logging.info("starting image resizing.....")
