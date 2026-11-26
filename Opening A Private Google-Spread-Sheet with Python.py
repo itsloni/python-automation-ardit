@@ -111,5 +111,3 @@ print(new_column)
 
 
 
-
-
