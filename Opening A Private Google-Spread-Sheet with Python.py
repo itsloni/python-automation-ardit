@@ -89,6 +89,14 @@ worksheet1.update_cell(4, 4, -900) # SAME WAY TO UPDATE A CELL THIS TIME USING T
 
 
 # BELOW SHOWS HOW TO UPDATE AND ADD A COLUMN
+existing_column = worksheet1.get_values("E2:E25")
+new_column = [[round((float(i[0]) * 9/5 + 32), 1)] for i in existing_column]
+worksheet1.update([["Fahrenheit"]] + new_column,"G1:G25")
+print(new_column)
+
+
+
+
 
 
 
