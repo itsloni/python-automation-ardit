@@ -13,3 +13,12 @@ face = face_haar_cascade.detectMultiScale(image, 1.1, 4) #This is used to detect
 
 #Note: when we then print face the variable above it give sa numpy array of 2Dlists that is a list with a list.
 print(face) # so basically the output are coordinates of a rectangle and each list inside is a rectangle and that represents the each face so there are about 2 list so that means that there were 2 faces in the image hence 22 rectangles were created.
+# Now we iterate throught the numpy array using a tuple as shown below:
+
+for (x,y,w,h) in face: # so from the array the xywh reps the coordinates of the rectangle.
+    cv2.rectangle(image, (x, y), (x+w, y+h), (255, 255, 255), 4)
+cv2.imwrite("human_faces.jpeg", image)
+
+
+
+
