@@ -52,40 +52,7 @@ def image_reader(images, FACE_SCANNER):
             if len(face) >= 1:
                 cv2.imwrite(OUTPUT_DIR / image.name, read_image)
 
-    #print(list_of_read_images)
 
-
-#
-# def face_finder(FACE_SCANNER, read_images, filtered_images):
-#     #print(read_images)
-#     for read_image in read_images:
-#         # for filtered in filtered_images:
-#         if FACE_SCANNER.is_file():
-#             logging.info("scanning started...")
-#             scanner = cv2.CascadeClassifier(FACE_SCANNER.name)
-#             face = scanner.detectMultiScale(read_image, 1.1, 4)
-#             cv2.imwrite(OUTPUT_DIR / image.name , read_image)
-#             print(face)
-                #     print(f"{filtered.name} is has no face")
-                #     continue
-                # else:
-                #     cv2.imwrite(OUTPUT_DIR / filtered.name, read_image)
-
-
-
-                 # print(read_image)
-
-
-
-# def face_image_transfer(face, read_image):
-#     new_path = cv2.imwrite(OUTPUT_DIR / )
-
-
-# def face_marker(face,read_image):
-#     for (x, y, w, h) in face:
-#        cv2.rectangle(read_image, (x, y), (x+w, y+h), (255, 255, 255), 4)
-#     if not cv2.imwrite(OUTPUT_DIR / read_image.name, read_image):
-#        return
 
 def main():
     image_path = INPUT_DIR.glob("**/*")
