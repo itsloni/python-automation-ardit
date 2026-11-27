@@ -31,20 +31,26 @@ def image_filter(images):
     return list_of_images
 
 def image_reader(images, FACE_SCANNER):
-    if FACE_SCANNER.is_file():
-        for image in images:
-            read_image = cv2.imread(image)
-            if read_image is None:
-                logging.warning(f"{image.name} can't be accessed")
-                continue
-            else:
-                logging.info("Image has been read moving to scanner")
-                logging.info("scanning started...")
-                scanner = cv2.CascadeClassifier(FACE_SCANNER.name)
-                face = scanner.detectMultiScale(read_image, 1.1, 4)
-                print(face)
-                if len(face) >= 1:
-                    cv2.imwrite(OUTPUT_DIR / image.name, read_image)
+    print(FACE_SCANNER)
+    print(FACE_SCANNER.name)
+    if not FACE_SCANNER.is_file():
+        logging.error(f"The scanner file{FACE_SCANNER.name} is not a file")
+        return
+
+    scanner = cv2.CascadeClassifier(FACE_SCANNER.name)
+    for image in images:
+        read_image = cv2.imread(image)
+        if read_image is None:
+            logging.warning(f"{image.name} can't be accessed")
+            continue
+        else:
+            logging.info("Image has been read moving to scanner")
+            logging.info("scanning started...")
+
+            face = scanner.detectMultiScale(read_image, 1.1, 4)
+            print(face)
+            if len(face) >= 1:
+                cv2.imwrite(OUTPUT_DIR / image.name, read_image)
 
     #print(list_of_read_images)
 
