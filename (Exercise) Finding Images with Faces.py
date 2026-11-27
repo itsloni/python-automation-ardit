@@ -14,6 +14,22 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandlers()
+        logging.FileHandler(FILE_LOG),
+        logging.StreamHandler()
     ]
 )
+
+
+def face_finder():
+
+
+
+def face_image_transfer():
+
+def main():
+
+
+
+
+if __name__ == "__main__":
+    main()
