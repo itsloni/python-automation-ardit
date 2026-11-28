@@ -23,3 +23,5 @@ cv2.imwrite("tested_elf.jpeg", watermark_place)
 blended_image = cv2.addWeighted(watermark_place,0.4, watermark_image,0.4, 0)#first variable is the image that is the section of the main image but the size of teh watermark image, the num beside it is the intensity for the blend , then the second variable is the watermark image itself, amd the number beside it is also the intensity to be applied for the blend, and the final value is the overall intensity for the new image formed usually zero.
 cv2.imwrite("blend.jpeg", blended_image) # This is NOT ALL you. You will then paste teh section unto teh entire image like belo
 
+image[y:, x:] = blended_image
+cv2.imwrite("watermarked_elfs_image.jpeg", image)
