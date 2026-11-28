@@ -372,3 +372,52 @@
 2026-11-28 06:01:22,300 - root - INFO - Image has been read, moving to scanner
 2026-11-28 06:01:23,225 - root - INFO - Face has been detected in working.jpeg and has bee added to the detected-images-having-face.
 2026-11-28 06:01:23,246 - root - INFO - Scanning Complete! find result in detected-images-having-face
+2026-11-28 06:09:43,080 - root - INFO - Face scanning started...
+2026-11-28 06:09:43,081 - root - INFO - Images moving to scanner.....
+2026-11-28 06:09:43,124 - root - INFO - galaxy (1).jpeg has been read successfully, about to be scanned.
+2026-11-28 06:09:43,661 - root - WARNING - galaxy (1).jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:09:43,673 - root - INFO - air.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:09:43,694 - root - WARNING - air.jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:09:43,707 - root - INFO - garden.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:09:45,582 - root - INFO - garden.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:09:45,640 - root - INFO - working.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:09:46,797 - root - INFO - working.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:09:46,803 - root - INFO - Scanning Complete! find detected images in detected-images-having-face
+2026-11-28 06:20:55,239 - root - INFO - Face scanning started...
+2026-11-28 06:20:55,242 - root - WARNING - No files/images found
+2026-11-28 06:23:41,892 - root - INFO - Face scanning started...
+2026-11-28 06:23:41,892 - root - WARNING - No files/images found
+2026-11-28 06:24:25,233 - root - INFO - Face scanning started...
+2026-11-28 06:24:25,234 - root - WARNING - No files/images found
+2026-11-28 06:24:25,302 - root - INFO - Scanning Complete! find detected images in detected-images-having-face directory.
+2026-11-28 06:31:04,674 - root - INFO - Face scanning started...
+2026-11-28 06:31:04,677 - root - WARNING - No files/images found
+2026-11-28 06:31:04,760 - root - INFO - Scanning Complete! find detected images in detected-images-having-face directory.
+2026-11-28 06:35:37,433 - root - INFO - Face scanning started...
+2026-11-28 06:35:37,436 - root - WARNING - No files/images found
+2026-11-28 06:35:37,439 - root - INFO - faces.xml isn/t a file or raw-images-to-detect is empty. Please check to confirm.
+2026-11-28 06:38:15,300 - root - INFO - Face scanning started...
+2026-11-28 06:38:15,303 - root - WARNING - No files/images found
+2026-11-28 06:38:15,304 - root - INFO - raw-images-to-detect is empty. Please check.
+2026-11-28 06:46:24,536 - root - INFO - Face scanning started...
+2026-11-28 06:46:24,538 - root - INFO - files moving to be read as image....
+2026-11-28 06:46:24,619 - root - INFO - galaxy (1).jpeg has been read successfully, about to be scanned.
+2026-11-28 06:46:25,396 - root - WARNING - galaxy (1).jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:46:25,397 - root - INFO - air.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:46:25,414 - root - WARNING - air.jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:46:25,427 - root - INFO - garden.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:46:27,742 - root - INFO - garden.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:46:27,752 - root - INFO - working.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:46:28,418 - root - INFO - working.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:46:28,427 - root - INFO - Scanning Complete! find detected images in detected-images-having-face directory.
+2026-11-28 06:55:43,927 - root - INFO - Face scanning started...
+2026-11-28 06:55:43,939 - root - INFO - files moving to be read as image....
+2026-11-28 06:55:44,041 - root - INFO - galaxy (1).jpeg has been read successfully, about to be scanned.
+2026-11-28 06:55:44,726 - root - WARNING - galaxy (1).jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:55:44,729 - root - INFO - air.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:55:44,783 - root - WARNING - air.jpeg has been scanned, and No face was detected. Moving to the next image.
+2026-11-28 06:55:44,824 - root - INFO - garden.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:55:46,201 - root - INFO - garden.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:55:46,217 - root - INFO - working.jpeg has been read successfully, about to be scanned.
+2026-11-28 06:55:46,857 - root - INFO - working.jpeg has been scanned, and face has been detected. It has been added to the detected-images-having-face directory.
+2026-11-28 06:55:46,864 - root - INFO - Scanning Complete! find detected images in detected-images-having-face directory.
