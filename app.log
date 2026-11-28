@@ -361,3 +361,14 @@
 2026-11-27 06:21:14,977 - root - INFO - scanning started...
 2026-11-27 06:21:16,270 - root - INFO - Image has been read moving to scanner
 2026-11-27 06:21:16,271 - root - INFO - scanning started...
+2026-11-28 06:01:19,903 - root - INFO - scanning started...
+2026-11-28 06:01:19,907 - root - INFO - Images moving to scanner.....
+2026-11-28 06:01:20,012 - root - INFO - Image has been read, moving to scanner
+2026-11-28 06:01:20,577 - root - WARNING - No face was found in galaxy (1).jpeg.
+2026-11-28 06:01:20,582 - root - INFO - Image has been read, moving to scanner
+2026-11-28 06:01:20,626 - root - WARNING - No face was found in air.jpeg.
+2026-11-28 06:01:20,667 - root - INFO - Image has been read, moving to scanner
+2026-11-28 06:01:22,265 - root - INFO - Face has been detected in garden.jpeg and has bee added to the detected-images-having-face.
+2026-11-28 06:01:22,300 - root - INFO - Image has been read, moving to scanner
+2026-11-28 06:01:23,225 - root - INFO - Face has been detected in working.jpeg and has bee added to the detected-images-having-face.
+2026-11-28 06:01:23,246 - root - INFO - Scanning Complete! find result in detected-images-having-face

@@ -45,24 +45,24 @@ def face_image_finder(images, FACE_SCANNER):
             logging.warning(f"{image.name} can't be read. Most likely not an image or it's a corrupted image")
             continue
         else:
-            logging.info("Image has been read, moving to scanner")
-            logging.info("scanning started...")
+            logging.info(f"{image.name} has been read successfully, about to be scanned.")
 
             face = scanner.detectMultiScale(read_image, 1.1, 4)
             if len(face) >= 1:
                 cv2.imwrite(OUTPUT_DIR / image.name, read_image)
-                logging.info(f"Face has been detected in {image.name} and has bee added to the {OUTPUT_DIR.name}.")
+                logging.info(f"{image.name} has been scanned, and face has been detected. It has been added to the {OUTPUT_DIR.name} directory.")
             else:
-                logging.warning(f"No face was found in {image.name}.")
+                logging.warning(f"{image.name} has been scanned, and No face was detected. Moving to the next image.")
                 continue
 
 
 
 def main():
+    logging.info("Face scanning started...")
     image_path = INPUT_DIR.glob("**/*")
     filtered_image = image_filter(image_path)
     face_image_finder(filtered_image, FACE_SCANNER)
-    # face_finder(FACE_SCANNER, read_image, filtered_image)
+    logging.info(f"Scanning Complete! find detected images in {OUTPUT_DIR.name}")
 
 
 
