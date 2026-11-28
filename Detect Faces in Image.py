@@ -2,7 +2,7 @@
 import cv2
 
 
-image = cv2.imread("humans.jpeg", 1)
+image = cv2.imread("garden.jpeg", 1)
 
 face_haar_cascade = cv2.CascadeClassifier("faces.xml") # This is calling the 'haar cascade' file so cv knows it.
 
@@ -17,7 +17,7 @@ print(face) # so basically the output are coordinates of a rectangle and each li
 
 for (x,y,w,h) in face: # so from the array the xywh reps the coordinates of the rectangle.
     cv2.rectangle(image, (x, y), (x+w, y+h), (255, 255, 255), 4)
-cv2.imwrite("human_faces.jpeg", image)
+cv2.imwrite("garden_faces.jpeg", image)
 
 
 

@@ -27,12 +27,13 @@ def image_filter(images):
             logging.warning(f"{image.name} is not a file")
             continue
         list_of_images.append(image)
-    #print(list_of_images)
+    if len(list_of_images) == 0:
+        logging.warning("No files/images found")
+        return
+    logging.info(f"Images moving to scanner.....")
     return list_of_images
 
-def image_reader(images, FACE_SCANNER):
-    print(FACE_SCANNER)
-    print(FACE_SCANNER.name)
+def face_image_finder(images, FACE_SCANNER):
     if not FACE_SCANNER.is_file():
         logging.error(f"The scanner file{FACE_SCANNER.name} is not a file")
         return
@@ -41,23 +42,26 @@ def image_reader(images, FACE_SCANNER):
     for image in images:
         read_image = cv2.imread(image)
         if read_image is None:
-            logging.warning(f"{image.name} can't be accessed")
+            logging.warning(f"{image.name} can't be read. Most likely not an image or it's a corrupted image")
             continue
         else:
-            logging.info("Image has been read moving to scanner")
+            logging.info("Image has been read, moving to scanner")
             logging.info("scanning started...")
 
             face = scanner.detectMultiScale(read_image, 1.1, 4)
-            print(face)
             if len(face) >= 1:
                 cv2.imwrite(OUTPUT_DIR / image.name, read_image)
+                logging.info(f"Face has been detected in {image.name} and has bee added to the {OUTPUT_DIR.name}.")
+            else:
+                logging.warning(f"No face was found in {image.name}.")
+                continue
 
 
 
 def main():
     image_path = INPUT_DIR.glob("**/*")
     filtered_image = image_filter(image_path)
-    image_reader(filtered_image, FACE_SCANNER)
+    face_image_finder(filtered_image, FACE_SCANNER)
     # face_finder(FACE_SCANNER, read_image, filtered_image)
 
 
